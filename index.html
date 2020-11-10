@@ -1,0 +1,30 @@
+<html>
+  <body>
+    <h1>Cross Site Scripting</h1>
+
+    <form id="login">
+      <h3>Username:</h3>
+      <input id="username" />
+      <h3>Password:</h3>
+      <input id="password" />
+
+      <div style="margin-top: 20px;">
+        <button type="submit">Login</button>
+        <button id="signup" type="button">Sign Up</button>
+      </div>
+    </form>
+
+    <form id="submitComment" method="GET">
+      <h3>Comment</h3>
+      <input id="comment" />
+      <button type="submit">Submit</button>
+    </form>
+
+    <em id="showComment"></em>
+
+    <script src="client.js"></script>
+    <script>
+      fetch("/cookies", { method: "get" });
+    </script>
+  </body>
+</html>
